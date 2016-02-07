@@ -1,0 +1,655 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B6732E91C66FFB2003B5B1D /* Colander.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B6732E81C66FFB2003B5B1D /* Colander.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B6732F01C66FFB2003B5B1D /* Colander.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6732E51C66FFB2003B5B1D /* Colander.framework */; };
+		3B6732F51C66FFB2003B5B1D /* ColanderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6732F41C66FFB2003B5B1D /* ColanderTests.swift */; };
+		3B6733321C670300003B5B1D /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B67330A1C67029E003B5B1D /* BrightFutures.framework */; };
+		3B6733331C670300003B5B1D /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6733271C6702B5003B5B1D /* Result.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B6732F11C66FFB2003B5B1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B6732DC1C66FFB2003B5B1D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B6732E41C66FFB2003B5B1D;
+			remoteInfo = Colander;
+		};
+		3B6733091C67029E003B5B1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B6732FF1C67029E003B5B1D /* BrightFutures.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9DF0815194470060083F7F2;
+			remoteInfo = "BrightFutures-iOS";
+		};
+		3B67330B1C67029E003B5B1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B6732FF1C67029E003B5B1D /* BrightFutures.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9DF0820194470060083F7F2;
+			remoteInfo = "BrightFutures-iOSTests";
+		};
+		3B67330D1C67029E003B5B1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B6732FF1C67029E003B5B1D /* BrightFutures.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9D45B001AF00659000F6CA7;
+			remoteInfo = "BrightFutures-Mac";
+		};
+		3B67330F1C67029E003B5B1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B6732FF1C67029E003B5B1D /* BrightFutures.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9D45B0A1AF00659000F6CA7;
+			remoteInfo = "BrightFutures-MacTests";
+		};
+		3B6733111C67029E003B5B1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B6732FF1C67029E003B5B1D /* BrightFutures.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9CBFD121B8268FB00702394;
+			remoteInfo = "BrightFutures-watchOS";
+		};
+		3B6733131C67029E003B5B1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B6732FF1C67029E003B5B1D /* BrightFutures.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E986479D1BF327E400B6BEEE;
+			remoteInfo = "BrightFutures-tvOS";
+		};
+		3B6733151C67029E003B5B1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B6732FF1C67029E003B5B1D /* BrightFutures.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E98647A61BF327E400B6BEEE;
+			remoteInfo = "BrightFutures-tvOSTests";
+		};
+		3B6733221C6702B5003B5B1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B6733171C6702B5003B5B1D /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D45480571A9572F5009D7229;
+			remoteInfo = "Result-Mac";
+		};
+		3B6733241C6702B5003B5B1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B6733171C6702B5003B5B1D /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D45480671A9572F5009D7229;
+			remoteInfo = "Result-MacTests";
+		};
+		3B6733261C6702B5003B5B1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B6733171C6702B5003B5B1D /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D454807D1A957361009D7229;
+			remoteInfo = "Result-iOS";
+		};
+		3B6733281C6702B5003B5B1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B6733171C6702B5003B5B1D /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D45480871A957362009D7229;
+			remoteInfo = "Result-iOSTests";
+		};
+		3B67332A1C6702B5003B5B1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B6733171C6702B5003B5B1D /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 57FCDE471BA280DC00130C48;
+			remoteInfo = "Result-tvOS";
+		};
+		3B67332C1C6702B5003B5B1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B6733171C6702B5003B5B1D /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 57FCDE541BA280E000130C48;
+			remoteInfo = "Result-tvOSTests";
+		};
+		3B67332E1C6702B5003B5B1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B6733171C6702B5003B5B1D /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D03579A31B2B788F005D26AE;
+			remoteInfo = "Result-watchOS";
+		};
+		3B6733301C6702B5003B5B1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B6733171C6702B5003B5B1D /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D03579B01B2B78A1005D26AE;
+			remoteInfo = "Result-watchOSTests";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3B6732E51C66FFB2003B5B1D /* Colander.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Colander.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B6732E81C66FFB2003B5B1D /* Colander.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Colander.h; sourceTree = "<group>"; };
+		3B6732EA1C66FFB2003B5B1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B6732EF1C66FFB2003B5B1D /* ColanderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColanderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B6732F41C66FFB2003B5B1D /* ColanderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColanderTests.swift; sourceTree = "<group>"; };
+		3B6732F61C66FFB2003B5B1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B6732FF1C67029E003B5B1D /* BrightFutures.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BrightFutures.xcodeproj; path = Carthage/Checkouts/BrightFutures/BrightFutures.xcodeproj; sourceTree = "<group>"; };
+		3B6733171C6702B5003B5B1D /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Result.xcodeproj; path = Carthage/Checkouts/Result/Result.xcodeproj; sourceTree = "<group>"; };
+		3B6733341C6705D3003B5B1D /* SyntaxTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyntaxTest.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B6732E11C66FFB2003B5B1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B6733321C670300003B5B1D /* BrightFutures.framework in Frameworks */,
+				3B6733331C670300003B5B1D /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B6732EC1C66FFB2003B5B1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B6732F01C66FFB2003B5B1D /* Colander.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B6732DB1C66FFB2003B5B1D = {
+			isa = PBXGroup;
+			children = (
+				3B6732E71C66FFB2003B5B1D /* Colander */,
+				3B6732F31C66FFB2003B5B1D /* ColanderTests */,
+				3B6732E61C66FFB2003B5B1D /* Products */,
+				3B6732FF1C67029E003B5B1D /* BrightFutures.xcodeproj */,
+				3B6733171C6702B5003B5B1D /* Result.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		3B6732E61C66FFB2003B5B1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B6732E51C66FFB2003B5B1D /* Colander.framework */,
+				3B6732EF1C66FFB2003B5B1D /* ColanderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B6732E71C66FFB2003B5B1D /* Colander */ = {
+			isa = PBXGroup;
+			children = (
+				3B6732E81C66FFB2003B5B1D /* Colander.h */,
+				3B6732EA1C66FFB2003B5B1D /* Info.plist */,
+			);
+			path = Colander;
+			sourceTree = "<group>";
+		};
+		3B6732F31C66FFB2003B5B1D /* ColanderTests */ = {
+			isa = PBXGroup;
+			children = (
+				3B6732F41C66FFB2003B5B1D /* ColanderTests.swift */,
+				3B6732F61C66FFB2003B5B1D /* Info.plist */,
+				3B6733341C6705D3003B5B1D /* SyntaxTest.swift */,
+			);
+			path = ColanderTests;
+			sourceTree = "<group>";
+		};
+		3B6733001C67029E003B5B1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B67330A1C67029E003B5B1D /* BrightFutures.framework */,
+				3B67330C1C67029E003B5B1D /* BrightFutures-iOSTests.xctest */,
+				3B67330E1C67029E003B5B1D /* BrightFutures.framework */,
+				3B6733101C67029E003B5B1D /* BrightFutures-MacTests.xctest */,
+				3B6733121C67029E003B5B1D /* BrightFutures.framework */,
+				3B6733141C67029E003B5B1D /* BrightFutures.framework */,
+				3B6733161C67029E003B5B1D /* BrightFutures-tvOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B6733181C6702B5003B5B1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B6733231C6702B5003B5B1D /* Result.framework */,
+				3B6733251C6702B5003B5B1D /* Result-MacTests.xctest */,
+				3B6733271C6702B5003B5B1D /* Result.framework */,
+				3B6733291C6702B5003B5B1D /* Result-iOSTests.xctest */,
+				3B67332B1C6702B5003B5B1D /* Result.framework */,
+				3B67332D1C6702B5003B5B1D /* Result-tvOSTests.xctest */,
+				3B67332F1C6702B5003B5B1D /* Result.framework */,
+				3B6733311C6702B5003B5B1D /* Result-watchOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3B6732E21C66FFB2003B5B1D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B6732E91C66FFB2003B5B1D /* Colander.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3B6732E41C66FFB2003B5B1D /* Colander */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B6732F91C66FFB2003B5B1D /* Build configuration list for PBXNativeTarget "Colander" */;
+			buildPhases = (
+				3B6732E01C66FFB2003B5B1D /* Sources */,
+				3B6732E11C66FFB2003B5B1D /* Frameworks */,
+				3B6732E21C66FFB2003B5B1D /* Headers */,
+				3B6732E31C66FFB2003B5B1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Colander;
+			productName = Colander;
+			productReference = 3B6732E51C66FFB2003B5B1D /* Colander.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3B6732EE1C66FFB2003B5B1D /* ColanderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B6732FC1C66FFB2003B5B1D /* Build configuration list for PBXNativeTarget "ColanderTests" */;
+			buildPhases = (
+				3B6732EB1C66FFB2003B5B1D /* Sources */,
+				3B6732EC1C66FFB2003B5B1D /* Frameworks */,
+				3B6732ED1C66FFB2003B5B1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B6732F21C66FFB2003B5B1D /* PBXTargetDependency */,
+			);
+			name = ColanderTests;
+			productName = ColanderTests;
+			productReference = 3B6732EF1C66FFB2003B5B1D /* ColanderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B6732DC1C66FFB2003B5B1D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Jonathan Bennett";
+				TargetAttributes = {
+					3B6732E41C66FFB2003B5B1D = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					3B6732EE1C66FFB2003B5B1D = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 3B6732DF1C66FFB2003B5B1D /* Build configuration list for PBXProject "Colander" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3B6732DB1C66FFB2003B5B1D;
+			productRefGroup = 3B6732E61C66FFB2003B5B1D /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3B6733001C67029E003B5B1D /* Products */;
+					ProjectRef = 3B6732FF1C67029E003B5B1D /* BrightFutures.xcodeproj */;
+				},
+				{
+					ProductGroup = 3B6733181C6702B5003B5B1D /* Products */;
+					ProjectRef = 3B6733171C6702B5003B5B1D /* Result.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				3B6732E41C66FFB2003B5B1D /* Colander */,
+				3B6732EE1C66FFB2003B5B1D /* ColanderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3B67330A1C67029E003B5B1D /* BrightFutures.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BrightFutures.framework;
+			remoteRef = 3B6733091C67029E003B5B1D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B67330C1C67029E003B5B1D /* BrightFutures-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "BrightFutures-iOSTests.xctest";
+			remoteRef = 3B67330B1C67029E003B5B1D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B67330E1C67029E003B5B1D /* BrightFutures.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BrightFutures.framework;
+			remoteRef = 3B67330D1C67029E003B5B1D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B6733101C67029E003B5B1D /* BrightFutures-MacTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "BrightFutures-MacTests.xctest";
+			remoteRef = 3B67330F1C67029E003B5B1D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B6733121C67029E003B5B1D /* BrightFutures.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BrightFutures.framework;
+			remoteRef = 3B6733111C67029E003B5B1D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B6733141C67029E003B5B1D /* BrightFutures.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BrightFutures.framework;
+			remoteRef = 3B6733131C67029E003B5B1D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B6733161C67029E003B5B1D /* BrightFutures-tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "BrightFutures-tvOSTests.xctest";
+			remoteRef = 3B6733151C67029E003B5B1D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B6733231C6702B5003B5B1D /* Result.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Result.framework;
+			remoteRef = 3B6733221C6702B5003B5B1D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B6733251C6702B5003B5B1D /* Result-MacTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Result-MacTests.xctest";
+			remoteRef = 3B6733241C6702B5003B5B1D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B6733271C6702B5003B5B1D /* Result.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Result.framework;
+			remoteRef = 3B6733261C6702B5003B5B1D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B6733291C6702B5003B5B1D /* Result-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Result-iOSTests.xctest";
+			remoteRef = 3B6733281C6702B5003B5B1D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B67332B1C6702B5003B5B1D /* Result.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Result.framework;
+			remoteRef = 3B67332A1C6702B5003B5B1D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B67332D1C6702B5003B5B1D /* Result-tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Result-tvOSTests.xctest";
+			remoteRef = 3B67332C1C6702B5003B5B1D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B67332F1C6702B5003B5B1D /* Result.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Result.framework;
+			remoteRef = 3B67332E1C6702B5003B5B1D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B6733311C6702B5003B5B1D /* Result-watchOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Result-watchOSTests.xctest";
+			remoteRef = 3B6733301C6702B5003B5B1D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B6732E31C66FFB2003B5B1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B6732ED1C66FFB2003B5B1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B6732E01C66FFB2003B5B1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B6732EB1C66FFB2003B5B1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B6732F51C66FFB2003B5B1D /* ColanderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B6732F21C66FFB2003B5B1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B6732E41C66FFB2003B5B1D /* Colander */;
+			targetProxy = 3B6732F11C66FFB2003B5B1D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3B6732F71C66FFB2003B5B1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3B6732F81C66FFB2003B5B1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3B6732FA1C66FFB2003B5B1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Colander/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbennett.Colander;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3B6732FB1C66FFB2003B5B1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Colander/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbennett.Colander;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3B6732FD1C66FFB2003B5B1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ColanderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbennett.ColanderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3B6732FE1C66FFB2003B5B1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ColanderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbennett.ColanderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B6732DF1C66FFB2003B5B1D /* Build configuration list for PBXProject "Colander" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B6732F71C66FFB2003B5B1D /* Debug */,
+				3B6732F81C66FFB2003B5B1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B6732F91C66FFB2003B5B1D /* Build configuration list for PBXNativeTarget "Colander" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B6732FA1C66FFB2003B5B1D /* Debug */,
+				3B6732FB1C66FFB2003B5B1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B6732FC1C66FFB2003B5B1D /* Build configuration list for PBXNativeTarget "ColanderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B6732FD1C66FFB2003B5B1D /* Debug */,
+				3B6732FE1C66FFB2003B5B1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B6732DC1C66FFB2003B5B1D /* Project object */;
+}

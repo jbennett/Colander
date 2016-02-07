@@ -1,0 +1,4 @@
+github "Quick/Nimble" "1a64a3fd9cc9d7ca031a94324df4368b07df5de6"
+github "Quick/Quick" "v0.9.0"
+github "antitypical/Result" "1.0.2"
+github "Thomvis/BrightFutures" "v3.3.0"
