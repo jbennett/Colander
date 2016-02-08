@@ -24,3 +24,26 @@ client
   .onSuccess({ print("saved successfully") })
   .onFailure({ print("failed to do stuff: \($0)") })
 
+client.getProjects(
+  success: {
+    guard let project = projects.first else { return }
+    self?.client.getIssuesForProject(project,
+      success: { issues in
+        guard let issue = issues.first else { return }
+        print(issue)
+        let comment = Comment(/* */)
+        client.saveComment(comment, forIssue: issue,
+          success: {
+            print("saved successfully")
+          }, failure: {
+            print("failed to do stuff: \($0)")
+          }
+        )
+      }, failure: {
+        
+      }
+    )
+  }, failure: {
+    
+  }
+)
