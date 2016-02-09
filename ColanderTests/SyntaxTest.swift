@@ -12,8 +12,7 @@ import Colander
 let configuration = try! SifterConfiguration(subdomain: "test", token: "abc123")
 let client = SifterClient(configuration)
 
-client
-  .getProjects()
+client.getProjects()
   .flatMap { $0.first }
   .flatMap { client.getIssuesForProject($0) }
   .flatMap { $0.first }
