@@ -9,5 +9,6 @@
 import Foundation
 
 public enum SifterError: ErrorType {
+  case InvalidDomain(String)
   case Other(NSError)
 }

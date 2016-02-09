@@ -12,6 +12,20 @@
 		3B6732F51C66FFB2003B5B1D /* ColanderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6732F41C66FFB2003B5B1D /* ColanderTests.swift */; };
 		3B6733321C670300003B5B1D /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B67330A1C67029E003B5B1D /* BrightFutures.framework */; };
 		3B6733331C670300003B5B1D /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6733271C6702B5003B5B1D /* Result.framework */; };
+		3B6733381C6776F1003B5B1D /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6733371C6776F1003B5B1D /* Project.swift */; };
+		3B67333A1C6776F9003B5B1D /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6733391C6776F9003B5B1D /* Issue.swift */; };
+		3B67333C1C677700003B5B1D /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67333B1C677700003B5B1D /* Comment.swift */; };
+		3B67333E1C677719003B5B1D /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67333D1C677719003B5B1D /* Listing.swift */; };
+		3B6733401C67771E003B5B1D /* Milestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67333F1C67771E003B5B1D /* Milestone.swift */; };
+		3B6733421C677725003B5B1D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6733411C677725003B5B1D /* Category.swift */; };
+		3B6733441C67772A003B5B1D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6733431C67772A003B5B1D /* Person.swift */; };
+		3B6733461C677737003B5B1D /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6733451C677737003B5B1D /* Status.swift */; };
+		3B6733481C67773D003B5B1D /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6733471C67773D003B5B1D /* Priority.swift */; };
+		3B67334A1C68686C003B5B1D /* EmailAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6733491C68686C003B5B1D /* EmailAddress.swift */; };
+		3B67334C1C686E16003B5B1D /* SifterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67334B1C686E16003B5B1D /* SifterClient.swift */; };
+		3B67334E1C686E29003B5B1D /* SifterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67334D1C686E29003B5B1D /* SifterConfiguration.swift */; };
+		3B6733501C693C04003B5B1D /* SifterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67334F1C693C04003B5B1D /* SifterError.swift */; };
+		3B6733521C693CB7003B5B1D /* NeworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6733511C693CB7003B5B1D /* NeworkClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +153,20 @@
 		3B6732FF1C67029E003B5B1D /* BrightFutures.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BrightFutures.xcodeproj; path = Carthage/Checkouts/BrightFutures/BrightFutures.xcodeproj; sourceTree = "<group>"; };
 		3B6733171C6702B5003B5B1D /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Result.xcodeproj; path = Carthage/Checkouts/Result/Result.xcodeproj; sourceTree = "<group>"; };
 		3B6733341C6705D3003B5B1D /* SyntaxTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyntaxTest.swift; sourceTree = "<group>"; };
+		3B6733371C6776F1003B5B1D /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		3B6733391C6776F9003B5B1D /* Issue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+		3B67333B1C677700003B5B1D /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		3B67333D1C677719003B5B1D /* Listing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
+		3B67333F1C67771E003B5B1D /* Milestone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Milestone.swift; sourceTree = "<group>"; };
+		3B6733411C677725003B5B1D /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		3B6733431C67772A003B5B1D /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		3B6733451C677737003B5B1D /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		3B6733471C67773D003B5B1D /* Priority.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Priority.swift; sourceTree = "<group>"; };
+		3B6733491C68686C003B5B1D /* EmailAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailAddress.swift; sourceTree = "<group>"; };
+		3B67334B1C686E16003B5B1D /* SifterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SifterClient.swift; sourceTree = "<group>"; };
+		3B67334D1C686E29003B5B1D /* SifterConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SifterConfiguration.swift; sourceTree = "<group>"; };
+		3B67334F1C693C04003B5B1D /* SifterError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SifterError.swift; sourceTree = "<group>"; };
+		3B6733511C693CB7003B5B1D /* NeworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeworkClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,8 +213,13 @@
 		3B6732E71C66FFB2003B5B1D /* Colander */ = {
 			isa = PBXGroup;
 			children = (
+				3B6733361C6776DB003B5B1D /* Models */,
 				3B6732E81C66FFB2003B5B1D /* Colander.h */,
 				3B6732EA1C66FFB2003B5B1D /* Info.plist */,
+				3B67334B1C686E16003B5B1D /* SifterClient.swift */,
+				3B67334D1C686E29003B5B1D /* SifterConfiguration.swift */,
+				3B67334F1C693C04003B5B1D /* SifterError.swift */,
+				3B6733511C693CB7003B5B1D /* NeworkClient.swift */,
 			);
 			path = Colander;
 			sourceTree = "<group>";
@@ -228,6 +261,23 @@
 				3B6733311C6702B5003B5B1D /* Result-watchOSTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		3B6733361C6776DB003B5B1D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3B6733411C677725003B5B1D /* Category.swift */,
+				3B67333B1C677700003B5B1D /* Comment.swift */,
+				3B6733491C68686C003B5B1D /* EmailAddress.swift */,
+				3B6733391C6776F9003B5B1D /* Issue.swift */,
+				3B67333D1C677719003B5B1D /* Listing.swift */,
+				3B67333F1C67771E003B5B1D /* Milestone.swift */,
+				3B6733431C67772A003B5B1D /* Person.swift */,
+				3B6733471C67773D003B5B1D /* Priority.swift */,
+				3B6733371C6776F1003B5B1D /* Project.swift */,
+				3B6733451C677737003B5B1D /* Status.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,6 +506,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B67334C1C686E16003B5B1D /* SifterClient.swift in Sources */,
+				3B6733501C693C04003B5B1D /* SifterError.swift in Sources */,
+				3B6733381C6776F1003B5B1D /* Project.swift in Sources */,
+				3B67333C1C677700003B5B1D /* Comment.swift in Sources */,
+				3B67333E1C677719003B5B1D /* Listing.swift in Sources */,
+				3B6733461C677737003B5B1D /* Status.swift in Sources */,
+				3B6733401C67771E003B5B1D /* Milestone.swift in Sources */,
+				3B6733441C67772A003B5B1D /* Person.swift in Sources */,
+				3B6733521C693CB7003B5B1D /* NeworkClient.swift in Sources */,
+				3B67334A1C68686C003B5B1D /* EmailAddress.swift in Sources */,
+				3B67333A1C6776F9003B5B1D /* Issue.swift in Sources */,
+				3B67334E1C686E29003B5B1D /* SifterConfiguration.swift in Sources */,
+				3B6733421C677725003B5B1D /* Category.swift in Sources */,
+				3B6733481C67773D003B5B1D /* Priority.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +634,7 @@
 		3B6732FA1C66FFB2003B5B1D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -580,12 +645,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jbennett.Colander;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		3B6732FB1C66FFB2003B5B1D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

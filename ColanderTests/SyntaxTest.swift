@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import Colander
 
-let configuration = SifterConfiguration(subdomain: "test", token: "abc123")
+let configuration = try! SifterConfiguration(subdomain: "test", token: "abc123")
 let client = SifterClient(configuration)
 
 client

@@ -11,9 +11,10 @@ import BrightFutures
 
 public class SifterClient {
   
-  let configuration: SifterConfiguration
+  let networkClient: NetworkClient
+  
   public init(configuration: SifterConfiguration) {
-    self.configuration = configuration
+    self.networkClient = configuration.networkClient()
   }
   
   public func getProjects() -> Future<[Project], SifterError> {
