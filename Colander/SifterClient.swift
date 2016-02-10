@@ -23,7 +23,7 @@ public class SifterClient {
     let projectsPromise = networkClient.getJSONResource("projects")
     projectsPromise.onSuccess {
       do {
-        let projects = try $0.getArray("projects").map(Project.init)
+        let projects: [Project] = try $0.arrayOf("projects")
         promise.success(projects)
       } catch {
         

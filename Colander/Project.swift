@@ -25,7 +25,7 @@ public struct Project {
   
 }
 
-extension Project {
+extension Project: JSONDecodable {
   
   init(json: JSON) throws {
     self.name = try json.getString("name")

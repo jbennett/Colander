@@ -72,4 +72,12 @@ struct JSON {
     return array.map(JSON.init)
   }
   
+  func arrayOf<Decodable: JSONDecodable>(key: String) throws -> [Decodable] {
+    return try getArray(key).map(Decodable.init)
+  }
+  
+}
+
+protocol JSONDecodable {
+  init(json: JSON) throws
 }
