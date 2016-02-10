@@ -26,6 +26,8 @@
 		3B67334E1C686E29003B5B1D /* SifterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67334D1C686E29003B5B1D /* SifterConfiguration.swift */; };
 		3B6733501C693C04003B5B1D /* SifterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67334F1C693C04003B5B1D /* SifterError.swift */; };
 		3B6733521C693CB7003B5B1D /* NeworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6733511C693CB7003B5B1D /* NeworkClient.swift */; };
+		3B6733921C6AE8D4003B5B1D /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6733911C6AE8D4003B5B1D /* JSON.swift */; };
+		3B6733941C6AE9E2003B5B1D /* JSONError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6733931C6AE9E2003B5B1D /* JSONError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +169,8 @@
 		3B67334D1C686E29003B5B1D /* SifterConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SifterConfiguration.swift; sourceTree = "<group>"; };
 		3B67334F1C693C04003B5B1D /* SifterError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SifterError.swift; sourceTree = "<group>"; };
 		3B6733511C693CB7003B5B1D /* NeworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeworkClient.swift; sourceTree = "<group>"; };
+		3B6733911C6AE8D4003B5B1D /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		3B6733931C6AE9E2003B5B1D /* JSONError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +217,7 @@
 		3B6732E71C66FFB2003B5B1D /* Colander */ = {
 			isa = PBXGroup;
 			children = (
+				3B67338A1C6AE1EC003B5B1D /* JSON */,
 				3B6733361C6776DB003B5B1D /* Models */,
 				3B6732E81C66FFB2003B5B1D /* Colander.h */,
 				3B6732EA1C66FFB2003B5B1D /* Info.plist */,
@@ -278,6 +283,15 @@
 				3B6733451C677737003B5B1D /* Status.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		3B67338A1C6AE1EC003B5B1D /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				3B6733911C6AE8D4003B5B1D /* JSON.swift */,
+				3B6733931C6AE9E2003B5B1D /* JSONError.swift */,
+			);
+			name = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -512,6 +526,7 @@
 				3B67333C1C677700003B5B1D /* Comment.swift in Sources */,
 				3B67333E1C677719003B5B1D /* Listing.swift in Sources */,
 				3B6733461C677737003B5B1D /* Status.swift in Sources */,
+				3B6733921C6AE8D4003B5B1D /* JSON.swift in Sources */,
 				3B6733401C67771E003B5B1D /* Milestone.swift in Sources */,
 				3B6733441C67772A003B5B1D /* Person.swift in Sources */,
 				3B6733521C693CB7003B5B1D /* NeworkClient.swift in Sources */,
@@ -519,6 +534,7 @@
 				3B67333A1C6776F9003B5B1D /* Issue.swift in Sources */,
 				3B67334E1C686E29003B5B1D /* SifterConfiguration.swift in Sources */,
 				3B6733421C677725003B5B1D /* Category.swift in Sources */,
+				3B6733941C6AE9E2003B5B1D /* JSONError.swift in Sources */,
 				3B6733481C67773D003B5B1D /* Priority.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

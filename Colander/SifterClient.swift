@@ -19,6 +19,18 @@ public class SifterClient {
   
   public func getProjects() -> Future<[Project], SifterError> {
     let promise = Promise<[Project], SifterError>()
+    
+    let projectsPromise = networkClient.getJSONResource("projects")
+    projectsPromise.onSuccess {
+      do {
+        let projects = try $0.getArray("projects").map(Project.init)
+        promise.success(projects)
+      } catch {
+        
+      }
+    }
+    projectsPromise.onFailure { promise.failure(.Other($0)) }
+    
     // TODO: implementation
     return promise.future
   }

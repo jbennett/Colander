@@ -8,6 +8,9 @@
 
 import Foundation
 import BrightFutures
+import Result
+
+typealias xJSON = [String: AnyObject]
 
 internal class NetworkClient {
   
@@ -35,13 +38,12 @@ internal class NetworkClient {
     return promise.future
   }
   
-  typealias JSON = [String: AnyObject]
   func getJSONResource(resource: String) -> Future<JSON, NSError> {
     return getResource(resource).flatMap { data -> Result<JSON, NSError> in
       do {
-        let json = try NSJSONSerialization.JSONObjectWithData(data, options: [])
+        let json = try JSON(data: data)
         return .Success(json)
-      } catch error {
+      } catch let error as NSError {
         return .Failure(error)
       }
     }
