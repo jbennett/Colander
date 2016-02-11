@@ -10,7 +10,11 @@ import Foundation
 import BrightFutures
 import Result
 
-typealias xJSON = [String: AnyObject]
+internal enum NetworkError: ErrorType {
+  case Authentication
+  case Parse
+  case Other(ErrorType)
+}
 
 internal class NetworkClient {
   
@@ -22,29 +26,35 @@ internal class NetworkClient {
     self.baseURL = baseURL
   }
   
-  func getResource(resource: String) -> Future<NSData, NSError> {
-    let promise = Promise<NSData, NSError>()
+  func getResource(resource: String) -> Future<NSData, NetworkError> {
+    let promise = Promise<NSData, NetworkError>()
     let url = baseURL.URLByAppendingPathComponent(resource)
     
     let task = session.dataTaskWithURL(url) { data, response, error in
       if let error = error {
-        promise.failure(error)
-      } else {
-        promise.success(data!)
+        promise.failure(.Other(error))
+        return
       }
+      
+      if let response = response as? NSHTTPURLResponse where response.statusCode != 200 {
+        promise.failure(.Authentication)
+        return
+      }
+        
+      promise.success(data!)
     }
     task.resume()
     
     return promise.future
   }
   
-  func getJSONResource(resource: String) -> Future<JSON, NSError> {
-    return getResource(resource).flatMap { data -> Result<JSON, NSError> in
+  func getJSONResource(resource: String) -> Future<JSON, NetworkError> {
+    return getResource(resource).flatMap { data -> Result<JSON, NetworkError> in
       do {
         let json = try JSON(data: data)
         return .Success(json)
-      } catch let error as NSError {
-        return .Failure(error)
+      } catch {
+        return .Failure(.Parse)
       }
     }
   }

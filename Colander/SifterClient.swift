@@ -30,8 +30,7 @@ public class SifterClient {
       }
     }
     projectsPromise.onFailure { promise.failure(.Other($0)) }
-    
-    // TODO: implementation
+
     return promise.future
   }
   

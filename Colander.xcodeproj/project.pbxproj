@@ -28,6 +28,9 @@
 		3B6733521C693CB7003B5B1D /* NeworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6733511C693CB7003B5B1D /* NeworkClient.swift */; };
 		3B6733921C6AE8D4003B5B1D /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6733911C6AE8D4003B5B1D /* JSON.swift */; };
 		3B6733941C6AE9E2003B5B1D /* JSONError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6733931C6AE9E2003B5B1D /* JSONError.swift */; };
+		3B6733981C6C3F75003B5B1D /* keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6733971C6C3F75003B5B1D /* keys.swift */; };
+		3B6733991C6C4047003B5B1D /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6733271C6702B5003B5B1D /* Result.framework */; };
+		3B67339A1C6C404E003B5B1D /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B67330A1C67029E003B5B1D /* BrightFutures.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +174,8 @@
 		3B6733511C693CB7003B5B1D /* NeworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeworkClient.swift; sourceTree = "<group>"; };
 		3B6733911C6AE8D4003B5B1D /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		3B6733931C6AE9E2003B5B1D /* JSONError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONError.swift; sourceTree = "<group>"; };
+		3B6733951C6C3F1D003B5B1D /* keys.sample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = keys.sample.swift; sourceTree = "<group>"; };
+		3B6733971C6C3F75003B5B1D /* keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +192,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B67339A1C6C404E003B5B1D /* BrightFutures.framework in Frameworks */,
+				3B6733991C6C4047003B5B1D /* Result.framework in Frameworks */,
 				3B6732F01C66FFB2003B5B1D /* Colander.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,6 +242,8 @@
 				3B6732F41C66FFB2003B5B1D /* ColanderTests.swift */,
 				3B6732F61C66FFB2003B5B1D /* Info.plist */,
 				3B6733341C6705D3003B5B1D /* SyntaxTest.swift */,
+				3B6733951C6C3F1D003B5B1D /* keys.sample.swift */,
+				3B6733971C6C3F75003B5B1D /* keys.swift */,
 			);
 			path = ColanderTests;
 			sourceTree = "<group>";
@@ -544,6 +553,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B6732F51C66FFB2003B5B1D /* ColanderTests.swift in Sources */,
+				3B6733981C6C3F75003B5B1D /* keys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

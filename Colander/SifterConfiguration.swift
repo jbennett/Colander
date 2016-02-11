@@ -39,7 +39,7 @@ public struct SifterConfiguration {
   private func sessionHeaders() -> [NSObject: AnyObject] {
     return [
       "X-Sifter-Token": token,
-      "Accept": "application/token",
+      "Accept": "application/json",
     ]
   }
   

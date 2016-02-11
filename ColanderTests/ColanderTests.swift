@@ -13,7 +13,21 @@ class ColanderTests: XCTestCase {
     
   
   func testExample() {
-    XCTAssert(true)
+    let expectation = self.expectationWithDescription("networking")
+    let config = try! SifterConfiguration(subdomain: TestKeys.domain, token: TestKeys.token)
+    let client = SifterClient(configuration: config)
+    
+    client.getProjects()
+      .onSuccess {
+        print($0)
+        expectation.fulfill()
+      }
+      .onFailure { _ in
+        XCTFail("Failed to get content")
+        expectation.fulfill()
+      }
+    
+    self.waitForExpectationsWithTimeout(5, handler: nil)
   }
   
 }
