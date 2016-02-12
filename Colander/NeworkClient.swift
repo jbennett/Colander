@@ -48,25 +48,8 @@ internal class NetworkClient {
   }
   
   func getResource(resource: String) -> Future<NSData, NetworkError> {
-    let promise = Promise<NSData, NetworkError>()
-    let url = baseURL.URLByAppendingPathComponent(resource)
-    
-    let task = session.dataTaskWithURL(url) { data, response, error in
-      if let error = error {
-        promise.failure(.Other(error))
-        return
-      }
-      
-      if let response = response as? NSHTTPURLResponse where response.statusCode != 200 {
-        promise.failure(.Authentication)
-        return
-      }
-        
-      promise.success(data!)
-    }
-    task.resume()
-    
-    return promise.future
+    let url = URLForResource(resource)    
+    return getContent(url)
   }
   
   func getJSONContent(url: NSURL) -> Future<JSON, NetworkError> {
@@ -81,14 +64,12 @@ internal class NetworkClient {
   }
   
   func getJSONResource(resource: String) -> Future<JSON, NetworkError> {
-    return getResource(resource).flatMap { data -> Result<JSON, NetworkError> in
-      do {
-        let json = try JSON(data: data)
-        return .Success(json)
-      } catch {
-        return .Failure(.Parse)
-      }
-    }
+    let url = URLForResource(resource)
+    return getJSONContent(url)
+  }
+  
+  private func URLForResource(resource: String) -> NSURL {
+    return baseURL.URLByAppendingPathComponent(resource)
   }
   
 }
