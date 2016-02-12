@@ -26,15 +26,23 @@ struct JSON {
 
   func getString(key: String) throws -> String {
     guard let string = json[key] as? String else {
-      throw JSONError.InvalidDataConversion(json: json, key: key, to: Swift.String)
+      throw JSONError.InvalidDataConversion(json: json, key: key, value: json[key], to: Swift.String)
     }
     
     return string
   }
   
+  func getStringz(key: String) throws -> String? {
+    guard json[key] != nil else {
+      return .None
+    }
+    
+    return json[key] as? String
+  }
+  
   func getInt(key: String) throws -> Int {
     guard let int = json[key] as? Int else {
-      throw JSONError.InvalidDataConversion(json: json, key: key, to: Swift.Int)
+      throw JSONError.InvalidDataConversion(json: json, key: key, value: json[key], to: Swift.Int)
     }
     
     return int
@@ -42,7 +50,7 @@ struct JSON {
   
   func getDouble(key: String) throws -> Double {
     guard let double = json[key] as? Double else {
-      throw JSONError.InvalidDataConversion(json: json, key: key, to: Swift.Double)
+      throw JSONError.InvalidDataConversion(json: json, key: key, value: json[key], to: Swift.Double)
     }
     
     return double
@@ -50,7 +58,7 @@ struct JSON {
   
   func getBool(key: String) throws -> Bool {
     guard let bool = json[key] as? Bool else {
-      throw JSONError.InvalidDataConversion(json: json, key: key, to: Swift.Bool)
+      throw JSONError.InvalidDataConversion(json: json, key: key, value: json[key], to: Swift.Bool)
     }
     
     return bool
@@ -58,7 +66,7 @@ struct JSON {
   
   func getURL(key: String) throws -> NSURL {
     guard let url = try NSURL(string: getString(key)) else {
-      throw JSONError.InvalidDataConversion(json: json, key: key, to: NSURL.self)
+      throw JSONError.InvalidDataConversion(json: json, key: key, value: json[key], to: NSURL.self)
     }
     
     return url
@@ -66,7 +74,7 @@ struct JSON {
   
   func getArray(key: String) throws -> [JSON] {
     guard let array = json[key] as? [[String: AnyObject]] else {
-      throw JSONError.InvalidDataConversion(json: json, key: key, to: Swift.Dictionary<String, AnyObject>)
+      throw JSONError.InvalidDataConversion(json: json, key: key, value: json[key], to: Swift.Dictionary<String, AnyObject>)
     }
     
     return array.map(JSON.init)
