@@ -32,14 +32,6 @@ struct JSON {
     return string
   }
   
-  func getStringz(key: String) throws -> String? {
-    guard json[key] != nil else {
-      return .None
-    }
-    
-    return json[key] as? String
-  }
-  
   func getInt(key: String) throws -> Int {
     guard let int = json[key] as? Int else {
       throw JSONError.InvalidDataConversion(json: json, key: key, value: json[key], to: Swift.Int)

@@ -34,11 +34,11 @@ extension Issue: JSONDecodable {
   
   init(json: JSON) throws {
     self.number = try json.getInt("number")
-    self.categoryName = try json.getStringz("category_name")
+    self.categoryName = try? json.getString("category_name")
     self.priority = try json.getString("priority")
     self.subject = try json.getString("subject")
     self.description = try json.getString("description")
-    self.milestoneName = try json.getStringz("milestone_name")
+    self.milestoneName = try? json.getString("milestone_name")
     self.openerName = try json.getString("opener_name")
     self.openerEmail = EmailAddress() // TODO:
     self.assigneeName = try json.getString("assignee_name")
