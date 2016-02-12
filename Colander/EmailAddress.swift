@@ -10,4 +10,13 @@ import Foundation
 
 public struct EmailAddress {
   
+  let value: String
+  
+}
+
+extension JSON {
+  func getEmailAddress(key: String) throws -> EmailAddress {
+    let emailString = try getString(key)
+    return EmailAddress(value: emailString)
+  }
 }
