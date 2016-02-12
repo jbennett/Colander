@@ -19,8 +19,17 @@ class ColanderTests: XCTestCase {
     
     client.getProjects()
       .onSuccess {
-        print($0)
-        expectation.fulfill()
+        if let first = $0.first {
+          client.getIssuesForProject(first)
+            .onSuccess {
+              print($0)
+              expectation.fulfill()
+            }
+            .onFailure { _ in
+              XCTFail("Failed to get issues")
+              expectation.fulfill()
+            }
+        }
       }
       .onFailure { _ in
         XCTFail("Failed to get content")

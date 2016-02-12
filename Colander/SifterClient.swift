@@ -26,17 +26,28 @@ public class SifterClient {
         let projects: [Project] = try $0.arrayOf("projects")
         promise.success(projects)
       } catch {
-        
+        // todo: handle it
       }
     }
-    projectsPromise.onFailure { promise.failure(.Other($0)) }
+    projectsPromise.onFailure { promise.failure(SifterError.Other($0)) }
 
     return promise.future
   }
   
   public func getIssuesForProject(project: Project) -> Future<[Issue], SifterError> {
     let promise = Promise<[Issue], SifterError>()
-    // TODO: implementation
+    
+    let issuesPromise = networkClient.getJSONContent(project.apiIssuesURL)
+    issuesPromise.onSuccess {
+      do {
+        let issues: [Issue] = try $0.arrayOf("issues")
+        promise.success(issues)
+      } catch {
+        // todo: handle it
+      }
+    }
+    issuesPromise.onFailure { promise.failure(SifterError.Other($0)) }
+    
     return promise.future
   }
   

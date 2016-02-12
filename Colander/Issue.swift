@@ -11,11 +11,11 @@ import Foundation
 public struct Issue {
   
   let number: Int
-  let categoryName: String
+  let categoryName: String?
   let priority: String
   let subject: String
   let description: String
-  let milestoneName: String
+  let milestoneName: String?
   let openerName: String
   let openerEmail: EmailAddress
   let assigneeName: String
@@ -28,4 +28,27 @@ public struct Issue {
   let url: NSURL
   let apiURL: NSURL
   
+}
+
+extension Issue: JSONDecodable {
+  
+  init(json: JSON) throws {
+    self.number = try json.getInt("number")
+    self.categoryName = try json.getStringz("category_name")
+    self.priority = try json.getString("priority")
+    self.subject = try json.getString("subject")
+    self.description = try json.getString("description")
+    self.milestoneName = try json.getStringz("milestone_name")
+    self.openerName = try json.getString("opener_name")
+    self.openerEmail = EmailAddress() // TODO:
+    self.assigneeName = try json.getString("assignee_name")
+    self.assigneeEmail = EmailAddress() // TODO:
+    self.status = try json.getString("status")
+    self.commentCount = try json.getInt("comment_count")
+    self.attachmentCount = try json.getInt("attachment_count")
+    self.createdAt = NSDate()
+    self.updatedAt = NSDate()
+    self.url = try json.getURL("url")
+    self.apiURL = try json.getURL("api_url")
+  }
 }

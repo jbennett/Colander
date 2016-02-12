@@ -11,5 +11,5 @@ import Foundation
 public enum SifterError: ErrorType {
   case ParseError
   case InvalidDomain(String)
-  case Other(NSError)
+  case Other(ErrorType)
 }
