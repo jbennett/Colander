@@ -18,21 +18,15 @@ class ColanderTests: XCTestCase {
     let client = SifterClient(configuration: config)
     
     client.getProjects()
+      .map { $0.first! }
+      .flatMap { client.getIssuesForProject($0) }
       .onSuccess {
-        if let first = $0.first {
-          client.getIssuesForProject(first)
-            .onSuccess {
-              print($0)
-              expectation.fulfill()
-            }
-            .onFailure { _ in
-              XCTFail("Failed to get issues")
-              expectation.fulfill()
-            }
-        }
+        print($0)
+        expectation.fulfill()
       }
-      .onFailure { _ in
-        XCTFail("Failed to get content")
+      .onFailure {
+        print($0)
+        XCTFail("Failed to get issues")
         expectation.fulfill()
       }
     
