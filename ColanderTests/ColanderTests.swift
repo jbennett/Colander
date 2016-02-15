@@ -39,6 +39,25 @@ class ColanderTests: XCTestCase {
     client.getProjects()
       .map { $0.first! }
       .flatMap { client.getMilestonesForProject($0) }
+      .onSuccess { _ in
+        expectation.fulfill()
+      }
+      .onFailure {
+        XCTFail("Failed to get milestones: \($0)")
+        expectation.fulfill()
+    }
+
+    self.waitForExpectationsWithTimeout(5, handler: nil)
+  }
+  
+  func testCanGetCategories() {
+    let expectation = self.expectationWithDescription("retrieving categories")
+    let config = try! SifterConfiguration(subdomain: TestKeys.domain, token: TestKeys.token)
+    let client = SifterClient(configuration: config)
+    
+    client.getProjects()
+      .map { $0.first! }
+      .flatMap { client.getCategoriesForProject($0) }
       .onSuccess {
         print($0)
         expectation.fulfill()
@@ -47,7 +66,6 @@ class ColanderTests: XCTestCase {
         XCTFail("Failed to get milestones: \($0)")
         expectation.fulfill()
     }
-    
     
     self.waitForExpectationsWithTimeout(5, handler: nil)
   }
