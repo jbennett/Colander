@@ -8,6 +8,7 @@
 
 import Foundation
 import BrightFutures
+import Result
 
 public class SifterClient {
   
@@ -42,11 +43,30 @@ public class SifterClient {
       do {
         let issues: [Issue] = try $0.arrayOf("issues")
         promise.success(issues)
-      } catch {
+      } catch let error {
         // todo: handle it
+        print(error)
       }
     }
     issuesPromise.onFailure { promise.failure(SifterError.Other($0)) }
+    
+    return promise.future
+  }
+  
+  public func getMilestonesForProject(project: Project) -> Future<[Milestone], SifterError> {
+    let promise = Promise<[Milestone], SifterError>()
+    
+    networkClient.getJSONContent(project.apiMilestonesURL)
+      .onSuccess {
+        do {
+          let milestones: [Milestone] = try $0.arrayOf("milestones")
+          promise.success(milestones)
+        } catch let error {
+          // todo: handle it
+          promise.failure(SifterError.Other(error))
+        }
+      }
+      .onFailure { promise.failure(SifterError.Other($0)) }
     
     return promise.future
   }
