@@ -19,93 +19,29 @@ public class SifterClient {
   }
   
   public func getProjects() -> Future<[Project], SifterError> {
-    let promise = Promise<[Project], SifterError>()
-    
-    let projectsPromise = networkClient.getJSONResource("projects")
-    projectsPromise.onSuccess {
-      do {
-        let projects: [Project] = try $0.arrayOf("projects")
-        promise.success(projects)
-      } catch {
-        // todo: handle it
-      }
-    }
-    projectsPromise.onFailure { promise.failure(SifterError.Other($0)) }
-
-    return promise.future
+    let url = networkClient.URLForResource("projects")
+    return getResource(url, resourceName: "projects")
   }
   
   public func getIssuesForProject(project: Project) -> Future<[Issue], SifterError> {
-    let promise = Promise<[Issue], SifterError>()
-    
-    let issuesPromise = networkClient.getJSONContent(project.apiIssuesURL)
-    issuesPromise.onSuccess {
-      do {
-        let issues: [Issue] = try $0.arrayOf("issues")
-        promise.success(issues)
-      } catch let error {
-        // todo: handle it
-        print(error)
-      }
-    }
-    issuesPromise.onFailure { promise.failure(SifterError.Other($0)) }
-    
-    return promise.future
+    let url = project.apiIssuesURL
+    return getResource(url, resourceName: "issues")
   }
   
   public func getMilestonesForProject(project: Project) -> Future<[Milestone], SifterError> {
-    let promise = Promise<[Milestone], SifterError>()
-    
-    networkClient.getJSONContent(project.apiMilestonesURL)
-      .onSuccess {
-        do {
-          let milestones: [Milestone] = try $0.arrayOf("milestones")
-          promise.success(milestones)
-        } catch let error {
-          // todo: handle it
-          promise.failure(SifterError.Other(error))
-        }
-      }
-      .onFailure { promise.failure(SifterError.Other($0)) }
-    
-    return promise.future
+    let url = project.apiMilestonesURL
+    return getResource(url, resourceName: "milestones")
   }
   
   public func getCategoriesForProject(project: Project) -> Future<[Category], SifterError> {
-    let promise = Promise<[Category], SifterError>()
-    
-    networkClient.getJSONContent(project.apiCategoriesURL)
-      .onSuccess {
-        do {
-          let categories: [Category] = try $0.arrayOf("categories")
-          promise.success(categories)
-        } catch let error {
-          // todo: handle it
-          promise.failure(SifterError.Other(error))
-        }
-      }
-      .onFailure { promise.failure(SifterError.Other($0)) }
-    
-    return promise.future
+    let url = project.apiCategoriesURL
+    return getResource(url, resourceName: "categories")
   }
   
   
   public func getPeopleForProject(project: Project) -> Future<[Person], SifterError> {
-    let promise = Promise<[Person], SifterError>()
-    
-    networkClient.getJSONContent(project.apiPeopleURL)
-      .onSuccess {
-        do {
-          let people: [Person] = try $0.arrayOf("people")
-          promise.success(people)
-        } catch let error {
-          // todo: handle it
-          promise.failure(SifterError.Other(error))
-        }
-      }
-      .onFailure { promise.failure(SifterError.Other($0)) }
-    
-    return promise.future
+    let url = project.apiPeopleURL
+    return getResource(url, resourceName: "people")
   }
   
   public func getStatuses() -> Future<[Status], SifterError> {
@@ -151,6 +87,25 @@ public class SifterClient {
     
     return promise.future
   }
+  
+  
+  private func getResource<T:JSONDecodable>(url: NSURL, resourceName: String) -> Future<[T], SifterError> {
+    let promise = Promise<[T], SifterError>()
+    
+    networkClient.getJSONContent(url)
+      .onSuccess { json in
+        do {
+          let resource: [T] = try json.arrayOf(resourceName)
+          promise.success(resource)
+        } catch {
+          // TODO: Handle it
+        }
+      }
+      .onFailure { promise.failure(SifterError.Other($0)) }
+    
+    return promise.future
+  }
+
 }
 
 extension SifterClient { // callbacks

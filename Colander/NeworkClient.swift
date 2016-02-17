@@ -68,7 +68,7 @@ internal class NetworkClient {
     return getJSONContent(url)
   }
   
-  private func URLForResource(resource: String) -> NSURL {
+  func URLForResource(resource: String) -> NSURL {
     return baseURL.URLByAppendingPathComponent(resource)
   }
   
