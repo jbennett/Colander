@@ -129,6 +129,28 @@ public class SifterClient {
     
     return promise.future
   }
+  
+  public func getPriorities() -> Future<[Priority], SifterError> {
+    let promise = Promise<[Priority], SifterError>()
+    
+    networkClient.getJSONResource("priorities")
+      .onSuccess {
+        do {
+          let rawPriorities = try $0.getJSON("priorities")
+          let priorities = try rawPriorities.keys.map {
+            return try Priority(name: $0, number: rawPriorities.getInt($0))
+          }
+          
+          promise.success(priorities)
+        } catch let error {
+          // todo: handle it
+          promise.failure(SifterError.Other(error))
+        }
+      }
+      .onFailure { promise.failure(SifterError.Other($0)) }
+    
+    return promise.future
+  }
 }
 
 extension SifterClient { // callbacks

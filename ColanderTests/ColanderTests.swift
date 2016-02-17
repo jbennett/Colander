@@ -92,14 +92,31 @@ class ColanderTests: XCTestCase {
     let expectation = self.expectationWithDescription("retrieving statuses")
     let config = try! SifterConfiguration(subdomain: TestKeys.domain, token: TestKeys.token)
     let client = SifterClient(configuration: config)
-   
+    
     client.getStatuses()
+      .onSuccess { _ in
+        expectation.fulfill()
+      }
+      .onFailure {
+        XCTFail("Failed to get milestones: \($0)")
+        expectation.fulfill()
+    }
+    
+    self.waitForExpectationsWithTimeout(5, handler: nil)
+  }
+  
+  func testCanGetPriorities() {
+    let expectation = self.expectationWithDescription("retrieving priorities")
+    let config = try! SifterConfiguration(subdomain: TestKeys.domain, token: TestKeys.token)
+    let client = SifterClient(configuration: config)
+    
+    client.getPriorities()
       .onSuccess {
         print($0)
         expectation.fulfill()
       }
       .onFailure {
-        XCTFail("Failed to get milestones: \($0)")
+        XCTFail("Failed to get priorities: \($0)")
         expectation.fulfill()
     }
     
