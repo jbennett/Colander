@@ -107,6 +107,28 @@ public class SifterClient {
     
     return promise.future
   }
+  
+  public func getStatuses() -> Future<[Status], SifterError> {
+    let promise = Promise<[Status], SifterError>()
+    
+    networkClient.getJSONResource("statuses")
+      .onSuccess {
+        do {
+          let rawStatuses = try $0.getJSON("statuses")
+          let statuses = try rawStatuses.keys.map {
+            return try Status(name: $0, number: rawStatuses.getInt($0))
+          }
+          
+          promise.success(statuses)
+        } catch let error {
+          // todo: handle it
+          promise.failure(SifterError.Other(error))
+        }
+      }
+      .onFailure { promise.failure(SifterError.Other($0)) }
+    
+    return promise.future
+  }
 }
 
 extension SifterClient { // callbacks

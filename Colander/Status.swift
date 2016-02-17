@@ -13,4 +13,18 @@ public struct Status {
   let name: String
   let number: Int
   
+  public init(name: String, number: Int) {
+    self.name = name
+    self.number = number
+  }
+  
+}
+
+extension Status: JSONDecodable {
+  
+  init(json: JSON) throws {
+    name = "asd"
+    number = 12
+  }
+  
 }

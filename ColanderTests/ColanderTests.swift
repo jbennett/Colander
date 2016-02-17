@@ -88,4 +88,22 @@ class ColanderTests: XCTestCase {
     self.waitForExpectationsWithTimeout(5, handler: nil)
   }
   
+  func testCanGetStatuses() {
+    let expectation = self.expectationWithDescription("retrieving statuses")
+    let config = try! SifterConfiguration(subdomain: TestKeys.domain, token: TestKeys.token)
+    let client = SifterClient(configuration: config)
+   
+    client.getStatuses()
+      .onSuccess {
+        print($0)
+        expectation.fulfill()
+      }
+      .onFailure {
+        XCTFail("Failed to get milestones: \($0)")
+        expectation.fulfill()
+    }
+    
+    self.waitForExpectationsWithTimeout(5, handler: nil)
+  }
+  
 }
