@@ -19,12 +19,3 @@ public struct Status {
   }
   
 }
-
-extension Status: JSONDecodable {
-  
-  init(json: JSON) throws {
-    name = "asd"
-    number = 12
-  }
-  
-}
