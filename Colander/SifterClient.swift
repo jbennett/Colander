@@ -89,6 +89,24 @@ public class SifterClient {
     return promise.future
   }
   
+  
+  public func getPeopleForProject(project: Project) -> Future<[Person], SifterError> {
+    let promise = Promise<[Person], SifterError>()
+    
+    networkClient.getJSONContent(project.apiPeopleURL)
+      .onSuccess {
+        do {
+          let people: [Person] = try $0.arrayOf("people")
+          promise.success(people)
+        } catch let error {
+          // todo: handle it
+          promise.failure(SifterError.Other(error))
+        }
+      }
+      .onFailure { promise.failure(SifterError.Other($0)) }
+    
+    return promise.future
+  }
 }
 
 extension SifterClient { // callbacks
