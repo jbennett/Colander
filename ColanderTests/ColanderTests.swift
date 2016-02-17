@@ -10,10 +10,26 @@ import XCTest
 import Colander
 
 class ColanderTests: XCTestCase {
-    
   
-  func testExample() {
-    let expectation = self.expectationWithDescription("networking")
+  func testCanGetProjects() {
+    let expectation = self.expectationWithDescription("retrieving projects")
+    let config = try! SifterConfiguration(subdomain: TestKeys.domain, token: TestKeys.token)
+    let client = SifterClient(configuration: config)
+    
+    client.getProjects()
+      .onSuccess { _ in
+        expectation.fulfill()
+      }
+      .onFailure {
+        XCTFail("Failed to get projects: \($0)")
+        expectation.fulfill()
+      }
+    
+    self.waitForExpectationsWithTimeout(5, handler: nil)
+  }
+  
+  func testCanGetIssues() {
+    let expectation = self.expectationWithDescription("retrieving issues")
     let config = try! SifterConfiguration(subdomain: TestKeys.domain, token: TestKeys.token)
     let client = SifterClient(configuration: config)
     
@@ -62,7 +78,7 @@ class ColanderTests: XCTestCase {
         expectation.fulfill()
       }
       .onFailure {
-        XCTFail("Failed to get milestones: \($0)")
+        XCTFail("Failed to get categories: \($0)")
         expectation.fulfill()
     }
     
@@ -81,7 +97,7 @@ class ColanderTests: XCTestCase {
         expectation.fulfill()
       }
       .onFailure {
-        XCTFail("Failed to get milestones: \($0)")
+        XCTFail("Failed to get people: \($0)")
         expectation.fulfill()
     }
     
@@ -98,7 +114,7 @@ class ColanderTests: XCTestCase {
         expectation.fulfill()
       }
       .onFailure {
-        XCTFail("Failed to get milestones: \($0)")
+        XCTFail("Failed to get statuses: \($0)")
         expectation.fulfill()
     }
     
