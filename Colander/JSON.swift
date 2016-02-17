@@ -27,7 +27,7 @@ struct JSON {
     
     self.json = json
   }
-
+  
   func getString(key: String) throws -> String {
     guard let string = json[key] as? String else {
       throw JSONError.InvalidDataConversion(json: json, key: key, value: json[key], to: Swift.String)
@@ -68,9 +68,17 @@ struct JSON {
     return url
   }
   
+  func getJSON(key: String) throws -> JSON {
+    guard let dictionary = json[key] as? [String: AnyObject] else {
+      throw JSONError.InvalidDataConversion(json: json, key: key, value: json[key], to: JSON.self)
+    }
+    
+    return JSON(json: dictionary)
+  }
+  
   func getArray(key: String) throws -> [JSON] {
     guard let array = json[key] as? [[String: AnyObject]] else {
-      throw JSONError.InvalidDataConversion(json: json, key: key, value: json[key], to: Swift.Dictionary<String, AnyObject>)
+      throw JSONError.InvalidDataConversion(json: json, key: key, value: json[key], to: Swift.Array<JSON>)
     }
     
     return array.map(JSON.init)
