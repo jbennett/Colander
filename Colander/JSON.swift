@@ -12,6 +12,10 @@ struct JSON {
   
   let json: [String: AnyObject]
   
+  var keys: [String] {
+    return Array(self.json.keys)
+  }
+  
   init(json: [String: AnyObject]) {
     self.json = json
   }
